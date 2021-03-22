@@ -284,6 +284,7 @@ func Windowsx86() error {
 func Linux32() error {
 	return Builder{
 		extra_tags: " release yara ",
+		disable_cgo: true,
 		goos:       "linux",
 		arch:       "386"}.Run()
 }
