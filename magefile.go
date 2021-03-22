@@ -281,6 +281,13 @@ func Windowsx86() error {
 		arch:       "386"}.Run()
 }
 
+func Linux32() error {
+	return Builder{
+		extra_tags: " release yara ",
+		goos:       "linux",
+		arch:       "386"}.Run()
+}
+
 func Darwin() error {
 	return Builder{goos: "darwin",
 		extra_tags: " release yara ",
